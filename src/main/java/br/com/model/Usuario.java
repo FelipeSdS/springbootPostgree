@@ -1,5 +1,7 @@
 package br.com.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,4 +30,7 @@ public class Usuario {
 	
 	@Column(name="tx_senha")
 	private String senha;
+	
+	@Column(name="dt_criacao")
+	private Date dataCriacao;
 }
