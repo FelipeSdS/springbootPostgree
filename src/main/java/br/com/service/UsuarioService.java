@@ -1,5 +1,6 @@
 package br.com.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +17,7 @@ public class UsuarioService {
 	UsuarioRepository usuarioRepository;
 	
 	public Usuario insert(Usuario usuario) {
+		usuario.setDataCriacao(new Date());
 		return usuarioRepository.save(usuario);
 	}
 	
